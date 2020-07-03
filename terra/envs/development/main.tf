@@ -21,6 +21,4 @@ module "aks_cluster_demo" {
     location              = var.location
     tags                  = var.tags
     dns_prefix            = var.dns_prefix
-    ssh_admin_name        = var.ssh_admin_name
-    ssh_key               = var.ssh_key
 }
