@@ -3,9 +3,9 @@ output "resource_group_demoaks" {
 }
 
 output "acr_registry_demo" {
-    value = module.acr_registry_demo.acr_name
+    value = module.acr_registry_demo.login_server
 }
 
 output "aks_cluster_demo" {
-    value = module.aks_cluster_demo.aks_name
+    value = module.aks_cluster_demo.kube_config
 }

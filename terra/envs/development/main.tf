@@ -11,7 +11,6 @@ module "acr_registry_demo" {
     acr_name              =  var.acr_name
     resource_group_name   = var.resource_group_name
     location              = var.location
-    tags                  = var.tags
 }
 
 module "aks_cluster_demo" {
