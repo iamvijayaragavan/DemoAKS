@@ -1,11 +1,7 @@
-data "azurerm_resource_group" current {
-    name  = var.resource_group_name
-}
-
 resource "azurerm_kubernetes_cluster" "current" {
   name                = var.aks_name
-  location            = data.azurerm_resource_group.current.location
-  resource_group_name = data.azurerm_resource_group.current.name
+  location            = var.location
+  resource_group_name = var.resource_group_name
   dns_prefix          = var.dns_prefix
   tags                = var.tags
   
