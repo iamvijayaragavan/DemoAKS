@@ -1,5 +1,5 @@
 module "resource_group_demoaks" {
-    source                = "../../modules/resource_groups"
+    source                = "../../modules/resource_groups/"
     resource_group_name   = var.resource_group_name
     location              = var.location
     tags                  = var.tags
@@ -7,7 +7,7 @@ module "resource_group_demoaks" {
 
 
 module "acr_registry_demo" {
-    source                = "../../modules/aks_registry"
+    source                = "../../modules/acr_registry/"
     name                  =  var.acr_name
     resource_group_name   = var.resource_group_name
     location              = var.location
@@ -15,7 +15,7 @@ module "acr_registry_demo" {
 }
 
 module "aks_cluster_demo" {
-    source                = "../../modules/aks_cluster"
+    source                = "../../modules/aks_cluster/"
     name                  =  var.aks_name
     resource_group_name   = var.resource_group_name
     location              = var.location
