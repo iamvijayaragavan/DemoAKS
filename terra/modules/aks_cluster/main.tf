@@ -23,15 +23,6 @@ resource "azurerm_kubernetes_cluster" "current" {
     vm_size    = var.vm_size
   }
   
-  agent_pool_profile {
-    name            = "default"
-    count           = "${var.agent_count}"
-    vm_size         = "Standard_A0"
-    os_type         = "Linux"
-    os_disk_size_gb = 30
-  }
-
-
   identity {
     type = "SystemAssigned"
   }
